@@ -12,8 +12,9 @@ function PokemonCollection({ pokemons }) {
             id={pokemon.id}
             name={pokemon.name}
             hp={pokemon.hp}
-            frontImgUrl={pokemon.sprites.front}
-            backImgUrl={pokemon.sprites.back}
+            // Add a conditional check for the sprites object
+            frontImgUrl={pokemon.sprites ? pokemon.sprites.front : ""}
+            backImgUrl={pokemon.sprites ? pokemon.sprites.back : ""}
           />
         ))}
       </Card.Group>

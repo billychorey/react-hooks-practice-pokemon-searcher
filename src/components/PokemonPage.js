@@ -16,15 +16,34 @@ function PokemonPage() {
       });
   }, []);
 
+  function addPokemon(newPokemon) {
+    // Check if a Pokemon with the same name already exists
+    const existingPokemon = pokemons.find((pokemon) => pokemon.name === newPokemon.name);
+
+    if (existingPokemon) {
+      // Handle error or duplicate Pokemon here
+      console.error("A Pokemon with the same name already exists.");
+      return;
+    }
+
+    const pokemonToAdd = {
+      id: newPokemon.name, // Use the name as the key
+      name: newPokemon.name,
+      hp: newPokemon.hp,
+      sprites: {
+        front: newPokemon.frontUrl,
+        back: newPokemon.backUrl,
+      },
+    };
+
+    setPokemons((prevPokemons) => [...prevPokemons, pokemonToAdd]);
+  }
+
   const displayedPokemons = search
     ? pokemons.filter((pokemon) =>
         pokemon.name.toLowerCase().includes(search.toLowerCase())
       )
     : pokemons;
-
-  function addPokemon(newPokemon) {
-    setPokemons((prevPokemons) => [...prevPokemons, newPokemon]);
-  }
 
   return (
     <Container>
