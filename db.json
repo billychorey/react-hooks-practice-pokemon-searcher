@@ -1342,10 +1342,10 @@
       }
     },
     {
-      "name": "steve",
-      "hp": "",
-      "frontUrl": "",
-      "backUrl": "",
+      "name": "Steve",
+      "hp": "10000",
+      "frontUrl": "https://cdn.media.amplience.net/i/partycity/P757764_01?$large$&fmt=auto&qlt=default",
+      "backUrl": "https://as2.ftcdn.net/v2/jpg/02/46/12/91/1000_F_246129134_wnpjvDK0hjE4zoMX5vzUUn5wpj2ufwnS.jpg",
       "id": 151
     }
   ]

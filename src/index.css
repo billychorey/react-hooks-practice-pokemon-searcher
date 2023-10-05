@@ -21,3 +21,7 @@
 .App-intro {
   font-size: large;
 }
+
+img {
+  max-height: 100px;
+}
